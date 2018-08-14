@@ -1,6 +1,8 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 <p align="center"><img height="200" src="https://img.jinse.com/139170_image3.png"></p>
-<p align="center"><h1>Ethereum@Laravel 開發範例 - 樂透遊戲</h1></p><br /><br />
+<p align="center"><h1>Ethereum@Laravel 開發範例 - 樂透遊戲</h1></p>
+<p align="center"><img src="https://cdn-images-1.medium.com/max/800/1*m_mZQsA2xauAqBNI8DQx1w.png"></p>
+<br/><br/>
 
 ## 1. 安裝必備 composer 套件
 
