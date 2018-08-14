@@ -57,8 +57,8 @@ $(function(){
         }else{
             axios.post('/enter', {
                 value: $('#value').val()
-              })
-              .then(function (response) {
+            })
+            .then(function (response) {
                 $('#balance').html(response.data['balance'])
                 $('#people').html(response.data['people'])
                 $('#total_balance').html(response.data['total_balance'])
@@ -68,12 +68,12 @@ $(function(){
                 }else{
                     alert('下注失敗')
                 }
-              })
-              .catch(function (error) {
+            })
+            .catch(function (error) {
                 $('#value').val(0)
                 alert('下注失敗')
                 console.log(error)
-              })
+            })
         }
     })
 })
