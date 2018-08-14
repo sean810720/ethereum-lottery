@@ -1,5 +1,5 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-<p align="center"><img height="200" src="https://img.jinse.com/139170_image3.png"></p>
+<div style="float:left;"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></div>
+<div style="float:right;"><img height="200" src="https://img.jinse.com/139170_image3.png"></div>
 <p align="center"><h1>Ethereum@Laravel 開發範例 - 樂透遊戲</h1></p>
 <p align="center"><img src="https://cdn-images-1.medium.com/max/800/1*m_mZQsA2xauAqBNI8DQx1w.png"></p>
 <br/><br/>
