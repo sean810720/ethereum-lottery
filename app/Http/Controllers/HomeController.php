@@ -49,7 +49,7 @@ class HomeController extends Controller
             'total_balance' => 0,
         ];
 
-        // 解鎖帳號
+        // 先解鎖帳號
         try {
             Ethereum::personal_unlockAccount(Auth::user()->address, Auth::user()->phrase);
 
