@@ -20,6 +20,13 @@ vi .env
 ETH_HOST='http://localhost'<br />
 ETH_PORT=8545<br /><br />
 
+## 4. 測試環境 MySQL 設定/匯入
+
+- 先在本機環境建一個新的資料庫「lottery」，相關設定則編輯 .env 內容的 DB_ 開頭屬性 <br />
+
+- 在專案根目錄下執行:<br />
+php artisan migrate<br /><br />
+
 
 ## 3. 以太坊私鏈架設
 
