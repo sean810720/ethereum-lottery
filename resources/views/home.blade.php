@@ -73,7 +73,7 @@ $(function(){
                 $('#value').val(0)
                 alert('下注失敗')
                 console.log(error)
-              });
+              })
         }
     })
 })
