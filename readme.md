@@ -55,7 +55,7 @@ truffle migrate --reset<br /><br />
 
 ## 8. 修改 LotteryController.php
 
-- 修改 app/Http/Controllers/LotteryController.php 建構式中的「莊家位址」與「被呼叫的合約或錢包位址」<br /><br />
+- 修改 app/Http/Controllers/LotteryController.php 建構式中的「莊家錢包位址」與「被呼叫的合約或錢包位址」<br /><br />
 
 
 ## 9. 修改 HomeController.php
@@ -63,7 +63,12 @@ truffle migrate --reset<br /><br />
 - 修改 app/Http/Controllers/HomeController.php 建構式中的「被呼叫的合約或錢包位址」<br /><br />
 
 
-## 10. 測試看看
+## 10. 修改 RegisterController.php
+
+- 修改 app/Http/Controllers/Auth/RegisterController.php 建構式中的「莊家錢包位址」<br /><br />
+
+
+## 11. 測試看看
 
 - 在 Laravel 專案根目錄下執行:<br />
 php artisan serve<br />

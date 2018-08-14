@@ -14,7 +14,7 @@ class LotteryController extends Controller
     {
         $this->middleware('auth');
 
-        // 莊家位址
+        // 莊家錢包位址
         $this->owner_address = '0x234F9fdC73f0642348fbDe346f2239354b8F5169';
 
         // 被呼叫的合約或錢包位址
@@ -31,7 +31,7 @@ class LotteryController extends Controller
 
         $result['msg'] = Ethereum::transaction(
 
-            // 呼叫者錢包位址
+            // 莊家錢包位址
             $this->owner_address,
 
             // 被呼叫的合約或錢包位址

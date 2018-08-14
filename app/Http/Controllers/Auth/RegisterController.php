@@ -39,6 +39,9 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+
+        // 莊家錢包位址
+        $this->owner_address = '0x234F9fdC73f0642348fbDe346f2239354b8F5169';
     }
 
     /**
@@ -72,8 +75,8 @@ class RegisterController extends Controller
             // 新用戶每人送 1 Eth
             Ethereum::transaction(
 
-                // 呼叫者錢包位址
-                '0x234F9fdC73f0642348fbDe346f2239354b8F5169',
+                // 莊家錢包位址
+                $this->owner_address,
 
                 // 目標錢包位址
                 $address,
