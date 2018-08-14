@@ -52,11 +52,11 @@ truffle migrate --reset<br /><br />
 
 ## 8. 修改 LotteryController.php
 
-- 調整 app/Http/Controllers/LotteryController.php 中的「呼叫者錢包位址」與「被呼叫的合約或錢包位址」<br /><br />
+- 修改 app/Http/Controllers/LotteryController.php 建構式中的「莊家位址」與「被呼叫的合約或錢包位址」<br /><br />
 
 ## 9. 修改 HomeController.php
 
-- 調整 app/Http/Controllers/HomeController.php 中的「被呼叫的合約或錢包位址」<br /><br />
+- 修改 app/Http/Controllers/HomeController.php 建構式中的「被呼叫的合約或錢包位址」<br /><br />
 
 ## 10. 測試看看
 
