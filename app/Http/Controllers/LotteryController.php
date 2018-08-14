@@ -10,6 +10,17 @@ use App\Repositories\EthereumRepository as Ethereum;
 
 class LotteryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+        // 莊家位址
+        $this->owner_address = '0x234F9fdC73f0642348fbDe346f2239354b8F5169';
+
+        // 被呼叫的合約或錢包位址
+        $this->contract_address = '0xe494b324121c9b141d0995c1e5be37d6ce9287a6';
+    }
+
     // 開獎
     public function pick_winner()
     {
@@ -21,10 +32,10 @@ class LotteryController extends Controller
         $result['msg'] = Ethereum::transaction(
 
             // 呼叫者錢包位址
-            '0x234F9fdC73f0642348fbDe346f2239354b8F5169',
+            $this->owner_address,
 
             // 被呼叫的合約或錢包位址
-            '0xe494b324121c9b141d0995c1e5be37d6ce9287a6',
+            $this->contract_address,
 
             // 下注金額 (單位:Wei)
             0,
@@ -37,6 +48,7 @@ class LotteryController extends Controller
         );
 
         $result['status'] = true;
+
         return response()->json($result);
     }
 }
