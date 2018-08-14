@@ -15,10 +15,10 @@ class LotteryController extends Controller
         $this->middleware('auth');
 
         // 莊家錢包位址
-        $this->owner_address = '0x234F9fdC73f0642348fbDe346f2239354b8F5169';
+        $this->owner_address = '0x66af7003B2265Da21515BC85336751eaf43c2948';
 
         // 被呼叫的合約或錢包位址
-        $this->contract_address = '0xe494b324121c9b141d0995c1e5be37d6ce9287a6';
+        $this->contract_address = '0x52084e373189586bc7b3e21a552deffd8a1d9b66';
     }
 
     // 開獎

@@ -41,7 +41,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
 
         // 莊家錢包位址
-        $this->owner_address = '0x234F9fdC73f0642348fbDe346f2239354b8F5169';
+        $this->owner_address = '0x66af7003B2265Da21515BC85336751eaf43c2948';
     }
 
     /**
