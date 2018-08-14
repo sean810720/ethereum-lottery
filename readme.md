@@ -2,6 +2,7 @@
 <p align="center"><img src="https://cdn-images-1.medium.com/max/800/1*m_mZQsA2xauAqBNI8DQx1w.png"></p>
 <br/><br/>
 
+
 ## 1. 安裝必備 composer 套件
 
 - 在專案根目錄下執行:<br />
@@ -19,6 +20,7 @@ vi .env
 - 加入以下內容:<br />
 ETH_HOST='http://localhost'<br />
 ETH_PORT=8545<br /><br />
+
 
 ## 4. 測試環境 MySQL 設定/匯入
 
@@ -50,13 +52,16 @@ cd truffle<br />
 truffle compile<br />
 truffle migrate --reset<br /><br />
 
+
 ## 8. 修改 LotteryController.php
 
 - 修改 app/Http/Controllers/LotteryController.php 建構式中的「莊家位址」與「被呼叫的合約或錢包位址」<br /><br />
 
+
 ## 9. 修改 HomeController.php
 
 - 修改 app/Http/Controllers/HomeController.php 建構式中的「被呼叫的合約或錢包位址」<br /><br />
+
 
 ## 10. 測試看看
 
@@ -69,6 +74,7 @@ http://127.0.0.1:8000<br />
 
 - 莊家開獎連結:<br />
 http://127.0.0.1:8000/pick_winner<br /><br />
+
 
 ## 相關連結
 
