@@ -2,35 +2,7 @@
 <p align="center"><img src="https://cdn-images-1.medium.com/max/800/1*m_mZQsA2xauAqBNI8DQx1w.png"></p>
 <br/><br/>
 
-
-## 1. 安裝必備 composer 套件
-
-- 在專案根目錄下執行:<br />
-composer install<br /><br />
-
-
-## 2. 編輯 .env 檔
-
-- 在專案根目錄下執行:<br />
-cp .env.example .env
-
-- 編輯 .env<br />
-vi .env
-
-- 加入以下內容:<br />
-ETH_HOST='http://localhost'<br />
-ETH_PORT=8545<br /><br />
-
-
-## 4. 測試環境 MySQL 設定/匯入
-
-- 先在測試環境的 MySQL 建一個新的資料庫「lottery」，相關設定則編輯 .env 內容的 DB_ 開頭屬性 <br />
-
-- 接著在專案根目錄下執行:<br />
-php artisan migrate<br /><br />
-
-
-## 5. 以太坊私鏈架設
+## 1. 以太坊私鏈架設
 
 - Ganache 下載連結:<br />
 https://truffleframework.com/ganache
@@ -39,46 +11,59 @@ https://truffleframework.com/ganache
 http://127.0.0.1:8545<br /><br />
 
 
-## 6. 安裝 Truffle 環境
+## 2. 安裝 Truffle 環境
 
 - 執行以下指令:<br />
 npm install -g truffle<br /><br />
 
 
-## 7. 編譯智慧合約並配置上私鏈
+## 3. 編譯智慧合約並配置上私鏈
 
 - 在 Laravel 專案根目錄下執行:<br />
 cd truffle<br />
-truffle compile<br />
 truffle migrate --reset<br /><br />
 
 
-## 8. 修改 LotteryController.php
+## 4. 安裝必備 composer 套件
 
-- 修改 app/Http/Controllers/LotteryController.php 建構式中的「莊家錢包位址」與「被呼叫的合約或錢包位址」<br /><br />
-
-
-## 9. 修改 HomeController.php
-
-- 修改 app/Http/Controllers/HomeController.php 建構式中的「被呼叫的合約或錢包位址」<br /><br />
+- 在專案根目錄下執行:<br />
+composer install<br /><br />
 
 
-## 10. 修改 RegisterController.php
+## 5. 編輯 .env 檔
 
-- 修改 app/Http/Controllers/Auth/RegisterController.php 建構式中的「莊家錢包位址」<br /><br />
+- 在專案根目錄下執行:<br />
+cp .env.example .env<br />
+vi .env<br />
+
+- 在 .env 內編輯以下參數:<br />
+ETH_HOST=http://localhost<br />
+ETH_PORT=8545<br />
+ETH_OWNER_ADDRESS=莊家錢包 Address, 請輸入私鏈上第一個 Account 的錢包 Address<br />
+ETH_CONTRACT_ADDRESS=智慧合約錢包 Address, 請輸入第 3. 點部署合約的 Address<br /><br />
 
 
-## 11. 測試看看
+## 6. 測試環境 MySQL 設定/匯入
+
+- 先在測試環境的 MySQL 建立一個新資料庫「ethereum_lottery」，並編輯 .env 內「DB_」開頭的參數 <br />
+
+- 接著在專案根目錄下執行:<br />
+php artisan migrate:fresh --seed<br /><br />
+
+
+## 7. 測試看看
 
 - 在 Laravel 專案根目錄下執行:<br />
 php artisan serve<br />
 
-- 玩家連結:<br />
+- 登入連結:<br />
 http://127.0.0.1:8000<br />
-先註冊後下注<br />
+玩家先註冊後下注<br />
 
-- 莊家開獎連結:<br />
-http://127.0.0.1:8000/pick_winner<br /><br />
+- 莊家開獎:<br />
+登入帳號: admin@lottery.com<br />
+登入密碼: 123456<br />
+按下「開獎」即可<br /><br />
 
 
 ## 相關連結
