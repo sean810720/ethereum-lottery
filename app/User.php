@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phrase', 'address',
+        'name', 'email', 'password', 'ethereum_keycode', 'ethereum_address',
     ];
 
     /**
@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function contract()
+    {
+        return $this->hasOne('App\Models\Contract', 'owner_user_id', 'id');
+    }
 }

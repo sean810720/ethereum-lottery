@@ -13,25 +13,6 @@
 
 /*
 |--------------------------------------------------------------------------
-| 範例
-|--------------------------------------------------------------------------
- */
-Route::get('account_balance', 'EthExampleController@account_balance');
-Route::get('send_money', 'EthExampleController@send_money');
-Route::get('send_contract', 'EthExampleController@send_contract');
-Route::get('call_contract', 'EthExampleController@call_contract');
-
-/*
-|--------------------------------------------------------------------------
-| 系統功能
-|--------------------------------------------------------------------------
- */
-
-// 開獎
-Route::get('pick_winner', 'LotteryController@pick_winner');
-
-/*
-|--------------------------------------------------------------------------
 | 後台功能
 |--------------------------------------------------------------------------
  */
@@ -47,3 +28,6 @@ Route::get('home', 'HomeController@index')->name('home');
 
 // 玩家下注
 Route::post('enter', 'HomeController@enter');
+
+// 莊家開獎
+Route::get('pick_winner', 'HomeController@pick_winner');

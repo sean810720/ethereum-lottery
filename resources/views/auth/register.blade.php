@@ -62,14 +62,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="phrase" class="col-md-4 col-form-label text-md-right">{{ __('Ethererum Phrase') }}</label>
+                            <label for="ethereum_keycode" class="col-md-4 col-form-label text-md-right">{{ __('Ethererum Keycode') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phrase" type="text" class="form-control{{ $errors->has('phrase') ? ' is-invalid' : '' }}" name="phrase" value="{{ old('phrase') }}" required>
+                                <input id="ethereum_keycode" type="text" class="form-control{{ $errors->has('ethereum_keycode') ? ' is-invalid' : '' }}" name="ethereum_keycode" value="{{ old('ethereum_keycode') }}" required>
 
-                                @if ($errors->has('phrase'))
+                                @if ($errors->has('ethereum_keycode'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('phrase') }}</strong>
+                                        <strong>{{ $errors->first('ethereum_keycode') }}</strong>
                                     </span>
                                 @endif
                             </div>

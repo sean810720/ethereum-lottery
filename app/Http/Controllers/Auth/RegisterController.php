@@ -40,8 +40,8 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
 
-        // 莊家錢包位址
-        $this->owner_address = '0x66af7003B2265Da21515BC85336751eaf43c2948';
+        // 莊家
+        $this->owner = User::where('is_owner', '1')->first();
     }
 
     /**
@@ -53,10 +53,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'     => 'required|string|max:255',
-            'email'    => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'phrase'   => 'required|string|max:255',
+            'name'             => 'required|string|max:255',
+            'email'            => 'required|string|email|max:255|unique:users',
+            'password'         => 'required|string|min:6|confirmed',
+            'ethereum_keycode' => 'required|string|max:255',
         ]);
     }
 
@@ -70,31 +70,39 @@ class RegisterController extends Controller
     {
         try {
 
-            $address = Ethereum::personal_newAccount($data['phrase']);
+            // 新玩家錢包地址
+            $ethereum_address = Ethereum::personal_newAccount($data['ethereum_keycode']);
 
             // 新用戶每人送 1 Eth
             Ethereum::transaction(
 
                 // 莊家錢包位址
-                $this->owner_address,
+                $this->owner['ethereum_address'],
 
                 // 目標錢包位址
-                $address,
+                $ethereum_address,
 
                 // 要送的錢 (單位:Wei)
                 Ethereum::to_wei(1)
             );
 
             return User::create([
-                'name'     => $data['name'],
-                'email'    => $data['email'],
-                'password' => Hash::make($data['password']),
-                'phrase'   => $data['phrase'],
-                'address'  => $address,
+                'name'             => $data['name'],
+                'email'            => $data['email'],
+                'password'         => Hash::make($data['password']),
+                'ethereum_keycode' => $data['ethereum_keycode'],
+                'ethereum_address' => $ethereum_address,
             ]);
 
         } catch (ErrorException $e) {
-            return $e->getMessage();
+
+            return User::create([
+                'name'             => $data['name'],
+                'email'            => $data['email'],
+                'password'         => Hash::make($data['password']),
+                'ethereum_keycode' => $data['ethereum_keycode'],
+                'ethereum_address' => $ethereum_address,
+            ]);
         }
     }
 }
