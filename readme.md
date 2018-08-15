@@ -7,7 +7,7 @@
 - Ganache 下載連結:<br />
 https://truffleframework.com/ganache
 
-- 安裝完啟動後本機就會預設有一條私鏈:<br />
+- 安裝完啟動後, 到設定內將 port 改為 8545, 儲存 & 重啟程式後則建好一條私鏈:<br />
 http://127.0.0.1:8545<br /><br />
 
 
