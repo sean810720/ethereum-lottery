@@ -77,9 +77,9 @@ https://github.com/jcsofts/laravel-ethereum/blob/master/README.md<br /><br />
 - Truffle 用法<br />
 https://truffleframework.com/docs<br />
 
-- 以太坊 RPC API 文件 (目前已完整實作)<br />
+- 以太坊 RPC API 文件 (Ethereum Package for Laravel 目前已完整實作)<br />
 https://github.com/ethereum/wiki/wiki/JSON-RPC<br />
 
-- 以太坊 Management API 文件 (目前只實作到 Personal 部分)<br />
+- 以太坊 Management API 文件 (Ethereum Package for Laravel 目前只實作到 Personal 部分)<br />
 https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal<br />
 
