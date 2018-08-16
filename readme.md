@@ -66,16 +66,20 @@ http://127.0.0.1:8000<br />
 按下「開獎」即可<br /><br />
 
 
+## 使用套件
+
+- Ethereum Package for Laravel<br />
+https://github.com/jcsofts/laravel-ethereum/blob/master/README.md<br /><br />
+
+
 ## 相關連結
 
 - Truffle 用法<br />
 https://truffleframework.com/docs<br />
 
-- 以太坊 RPC API 文件<br />
-https://github.com/ethereum/wiki/wiki/JSON-RPC
+- 以太坊 RPC API 文件 (目前已完整實作)<br />
+https://github.com/ethereum/wiki/wiki/JSON-RPC<br />
 
-- Ethereum Package for Laravel<br />
-https://github.com/jcsofts/laravel-ethereum/blob/master/README.md<br />
-
-
+- 以太坊 Management API 文件 (目前只實作到 Personal 部分)<br />
+https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal<br />
 
