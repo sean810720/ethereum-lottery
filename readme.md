@@ -69,7 +69,7 @@ http://127.0.0.1:8000<br />
 ## 使用套件
 
 - Ethereum Package for Laravel<br />
-https://github.com/jcsofts/laravel-ethereum/blob/master/README.md<br /><br />
+https://packagist.org/packages/jcsofts/laravel-ethereum<br /><br />
 
 
 ## 相關連結
